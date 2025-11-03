@@ -1,20 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width= , initial-scale=1.0">
     <title>personal info card</title>
 </head>
 <style>
-    body{
-        background-color: antiquewhite;
+    body {
+        background-color: rgb(33, 81, 11);
+    }
+
+    .card {
+        background-color: rgb(46, 134, 46);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+
+        border-radius: 10px;
+        width: 30vw;
+        height: 10vw;
+        text-align: center;
+        margin-left: 35vw;
+        margin-top: 10vw;
+        padding-top: 10vw;
+        padding-bottom: 3vw;
+
+
+    }
+
+    .card p {
+        font-family: sans-serif;
+    }
+
+    .card h2 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .head {
+        background-color: rgb(246, 248, 250);
+        border-radius: 50%;
+        width: 2vw;
+        height: 2vw;
+        border: 3px solid #555;
+        /*outline*/
+    }
+
+    .avator {
+        background-color: rgb(246, 248, 250);
+        border-top-right-radius: 40%;
+        border-top-left-radius: 40%;
+        width: 4vw;
+        height: 3vw;
+        border: 3px solid #555;
+        /* outline */
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -21%;
+        position: relative;
+
+    }
+
+    .circle {
+        background-color: #555;
+        width: 8vw;
+        height: 8vw;
+        border-radius: 50%;
+        margin-bottom: -7vw;
+    }
+
+    .whole {
+        animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+        0%,
+        100% {
+            transform: translateY(0);
+            /* starting position */
+        }
+
+        50% {
+            transform: translateY(-10px);
+            /* moves up slightly */
+        }
     }
 </style>
+
 <body>
-    <div class="card">
-        <h2>Izma Naseer</h2>
-        <p>A multipotentialite exploring design, code, and creativity</p>
-        <p>Karachi, Pakistan</p>
-    </div>
+    <div class="whole">
+        <div class="card">
+            <h2>Izma Naseer</h2>
+            <p>A multipotentialite exploring design, code, and creativity</p>
+            <p>Karachi, Pakistan</p>
+        </div>
+        <div class="group">
+            <div class="circle"></div>
+            <div class="head"></div>
+            <div class="avator"></div>
+        </div>
 </body>
+
 </html>
